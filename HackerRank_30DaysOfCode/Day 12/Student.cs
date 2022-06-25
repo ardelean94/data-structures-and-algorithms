@@ -4,28 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructuresAndAlgorithms
+namespace DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_12
 {
-    class Person2
-    {
-        protected string firstName;
-        protected string lastName;
-        protected int id;
-
-        public Person2() { }
-        public Person2(string firstName, string lastName, int identification)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.id = identification;
-        }
-        public void printPerson()
-        {
-            Console.WriteLine("Name: " + lastName + ", " + firstName + "\nID: " + id);
-        }
-    }
-
-    class Student : Person2
+    public class Student : Person
     {
         private int[] testScores;
 
