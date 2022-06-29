@@ -7,6 +7,7 @@ using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_11;
 using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_12;
 using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_14;
 using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_15;
+using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_16;
 using System.Linq;
 
 namespace DataStructuresAndAlgorithms
@@ -15,14 +16,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            Node head = null;
-            int T = int.Parse(Console.ReadLine());
-            while (T-- > 0)
-            {
-                int data = int.Parse(Console.ReadLine());
-                head = Linkedlist.Insert(head, data);
-            }
-            Linkedlist.Display(head);
+
         }
     }
 }
