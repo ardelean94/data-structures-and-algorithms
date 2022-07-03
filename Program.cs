@@ -24,7 +24,8 @@ namespace DataStructuresAndAlgorithms
             //int[] array = new int[] { 8, 2, 4, 1, 3 };
             //BubbleSort.Sort(array);
             //BubbleSort.SortDesc(array);
-            SelectionSort.Sort(array);
+            //SelectionSort.Sort(array);
+            InsertionSort.Sort(array);
 
             foreach (var element in array)
                 Console.WriteLine(element);
