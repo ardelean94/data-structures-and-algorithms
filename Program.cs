@@ -20,14 +20,14 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            //int[] array = new int[] { 23, 58, 100, 4, -4, 2, 1000, 543, 0, 20, 20 };
+            int[] array = new int[] { 23, 58, 100, 4, -4, 2, 1000, 543, 0, 20, 20 };
+            //int[] array = new int[] { 8, 2, 4, 1, 3 };
             //BubbleSort.Sort(array);
             //BubbleSort.SortDesc(array);
+            SelectionSort.Sort(array);
 
-            //foreach(var element in array)
-            //    Console.WriteLine(element);
-
-            
+            foreach (var element in array)
+                Console.WriteLine(element);
         }
     }
 }
