@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructuresAndAlgorithms.cSharpBasic
 {
-    public class Employee
+    public class CoCreator
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

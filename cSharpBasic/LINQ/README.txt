@@ -31,3 +31,28 @@ foreach (var emp in OldestAgeForEachCompany(employees))
 {
     Console.WriteLine($"The oldest employee of company {emp.Key} is {emp.Value.FirstName} {emp.Value.LastName} having age {emp.Value.Age}");
 }
+
+/*  Call AverageAgeForEachCompany  in Main */
+var coCreators = new CoCreatorsRepository().GetCoCreators();
+var averageAgePerCompany = CompanyAc.AverageAgeForEachCompany(coCreators);
+
+foreach(KeyValuePair<string, int> keyValue in averageAgePerCompany)
+{
+    Console.WriteLine(keyValue.Key + " " + keyValue.Value);
+}
+
+
+
+/*  Some examples   */
+//  LINQ Query Operators
+var youngerCoCreators =
+    from c in coCreators
+    where c.Age < 50
+    orderby c.Company
+    select c;
+
+//  LINQ Extension Methods
+var youngCoCreators = coCreators
+    .Where(coCreator => coCreator.Age < 50)
+    .GroupBy(c => c.Company)
+    .Select(c => new { Company = c.Key });
