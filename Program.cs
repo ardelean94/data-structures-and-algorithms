@@ -5,6 +5,7 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 using DataStructuresAndAlgorithms.HackerRank_30DaysOfCode.Day_26;
 using System.Linq;
 using DataStructuresAndAlgorithms.cSharpBasic.LINQ;
+using DataStructuresAndAlgorithms.cSharpBasic.NoteStore;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -12,13 +13,7 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            var coCreators = new CoCreatorsRepository().GetCoCreators();
-            var averageAgePerCompany = CompanyAc.AverageAgeForEachCompany(coCreators);
-
-            foreach(KeyValuePair<string, int> keyValue in averageAgePerCompany)
-            {
-                Console.WriteLine(keyValue.Key + " " + keyValue.Value);
-            }
+            
         }
     }
 }
