@@ -13,7 +13,13 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            
+            var repo = new CoCreatorsRepository().GetCoCreators();
+            var coCreatorsPerCompany = CompanyAc.CountOfCoCreatorsForEachCompany(repo);
+
+            foreach (var element in coCreatorsPerCompany)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }

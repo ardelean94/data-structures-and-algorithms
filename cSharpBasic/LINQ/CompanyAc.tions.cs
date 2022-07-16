@@ -19,9 +19,14 @@ namespace DataStructuresAndAlgorithms.cSharpBasic.LINQ
             return averageAgeForEachCompany;
         }
 
-        public static Dictionary<string, int> CountOfEmployeesForEachCompany(List<CoCreator> coCreators)
+        public static Dictionary<string, int> CountOfCoCreatorsForEachCompany(List<CoCreator> coCreators)
         {
-            throw new NotImplementedException();
+            var coCreatorsPerCompany = coCreators
+                .GroupBy(c => c.Company)
+                .Select(c => new { Company = c.Key, Count = c.Count() })
+                .ToDictionary(c => c.Company, c => c.Count);
+
+            return coCreatorsPerCompany;
         }
 
         public static Dictionary<string, CoCreator> OldestAgeForEachCompany(List<CoCreator> coCreators)
