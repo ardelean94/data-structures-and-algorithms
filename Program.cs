@@ -14,11 +14,12 @@ namespace DataStructuresAndAlgorithms
         static void Main(string[] args)
         {
             var repo = new CoCreatorsRepository().GetCoCreators();
-            var coCreatorsPerCompany = CompanyAc.CountOfCoCreatorsForEachCompany(repo);
+            var oldestAgeForEachCompany = CompanyActions.OldestAgeForEachCompany(repo);
 
-            foreach (var element in coCreatorsPerCompany)
+
+            foreach (KeyValuePair<string, CoCreator> keyValue in oldestAgeForEachCompany)
             {
-                Console.WriteLine(element);
+                Console.WriteLine(keyValue.Key + " " + keyValue.Value);
             }
         }
     }

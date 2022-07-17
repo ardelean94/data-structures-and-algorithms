@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructuresAndAlgorithms.cSharpBasic
+namespace DataStructuresAndAlgorithms.cSharpBasic.LINQ
 {
     public class CoCreator
     {

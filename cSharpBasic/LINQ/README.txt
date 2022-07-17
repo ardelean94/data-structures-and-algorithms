@@ -34,13 +34,32 @@ foreach (var emp in OldestAgeForEachCompany(employees))
 
 /*  Call AverageAgeForEachCompany  in Main */
 var coCreators = new CoCreatorsRepository().GetCoCreators();
-var averageAgePerCompany = CompanyAc.AverageAgeForEachCompany(coCreators);
+var averageAgePerCompany = CompanyActions.AverageAgeForEachCompany(coCreators);
 
 foreach(KeyValuePair<string, int> keyValue in averageAgePerCompany)
 {
     Console.WriteLine(keyValue.Key + " " + keyValue.Value);
 }
 
+
+/*  Call CountOfCoCreatorsForEachCompany  in Main */
+var coCreators = new CoCreatorsRepository().GetCoCreators();
+var coCreatorsPerCompany = CompanyActions.AverageAgeForEachCompany(coCreators);
+
+foreach(KeyValuePair<string, int> keyValue in coCreatorsPerCompany)
+{
+    Console.WriteLine(keyValue.Key + " " + keyValue.Value);
+}
+
+/*  Call OldestAgeForEachCompany  in Main */
+var repo = new CoCreatorsRepository().GetCoCreators();
+var oldestAgeForEachCompany = CompanyActions.OldestAgeForEachCompany(repo);
+
+
+foreach (KeyValuePair<string, CoCreator> keyValue in oldestAgeForEachCompany)
+{
+    Console.WriteLine(keyValue.Key + " " + keyValue.Value);
+}
 
 
 /*  Some examples   */
